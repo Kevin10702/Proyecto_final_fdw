@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById("formularioFlores").addEventListener('submit', (event) => {
         event.preventDefault();
-              //console.log('Llego el evento del formulario');
         
         let nombre = document.getElementById("name").value;
         let color = document.getElementById("color").value;
@@ -40,7 +39,6 @@ const agregarNuevaFlor = (flor) => {
 const editarFlorExistente = (flor, indexFlor) => {
     let flores = obtenerFloresDesdeLocalStorage();
     const indice = parseInt(indexFlor);
-   // console.log("Editando flor", indice);
     if (indice >= flores.length) {
         alert("No se encontró la flor a editar");
         return;
