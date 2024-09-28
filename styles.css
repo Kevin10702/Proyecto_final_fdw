@@ -1,0 +1,246 @@
+
+body {
+	background-image: linear-gradient(to right, #52eb3a, #15ec6f, #00ec97, #00eab7, #06e7ce, #00e2e3, #23dbf1, #54d3f7, #6ec6ff, #95b6fc, #bba4eb, #d692ce);
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.home {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.in-flex{
+      flex: 1;
+      
+}
+.in-flex:first-child{
+    flex: 0;
+    padding: 0px;
+    background-color: #000;
+    margin: 0px;
+
+}
+.in-flexn div {
+    padding: 0px;
+    background-color: #000;
+    margin: 0px;
+}
+h4{
+    color: white;
+}
+h6{
+	
+    color: white;
+   }
+header{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, #f3eed9, #ffdcc1, #ffc5bd, #ffb2d3, #e8abf8);
+    width: 100%;
+    height: 80px;
+}
+
+.encabezado{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;   
+}
+
+header ul{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    font-size: 35px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: none
+}
+header ul li{
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   color:ghostwhite;
+   margin: 100px;
+   font: size 100px;
+}
+img{
+    height: 80px;
+    width: 300px;
+    }
+.main{
+    background-image: url(./imagenes/fondo.jpeg);
+    height: 527px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+.correo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #f54290;
+    font-size: 25px;
+}
+.caja{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #e877a8;
+    font-size: 20px;
+}
+.container{
+    background-color:aqua;
+    margin: none;
+    width: full screen;
+    height: 0%;
+}
+.contenedor {
+	width: 100%;
+	max-width: 1500px;
+	margin: auto;
+	padding: 75px ;
+	
+
+	display: grid;
+	grid-template-columns: 1fr .5fr;
+	gap: 20px;
+
+}
+
+.titulo {
+	font-size: 24px;
+	padding: 20px 0;
+}
+
+.contenedor-flores {
+
+	display: grid;
+	grid-template-columns: repeat(3, .5fr);
+	gap: 5px;*/
+}
+
+.card {
+	border-radius: 10px;
+	min-height: 200px;
+	font-weight: bold;
+	padding: 20px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+
+}
+
+.card .textos {
+	height: 1%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	color: #faf9fa;
+}
+
+.banner {
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px;
+	background-size: cover;
+	background-position: center center;
+	color: #fcfdfe;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.banner ul {
+	list-style: none;
+}
+
+.banner ul li {
+	margin: 20px;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+	
+}
+
+@media screen and (max-width: 700px) {
+	
+}
+
+@media screen and (max-width: 600px) {
+
+}
+
+.item1 {
+    grid-area: header;
+	color: #086307;
+	
+}
+
+.item2 {
+    grid-area: menu;
+	color: #000;
+	
+}
+
+.item3 {
+    grid-area: main;
+	color: #6c7005;
+}
+
+.item4 {
+    grid-area: right;
+	color: #070aed;
+}
+
+.item5 {
+    grid-area: footer;
+	color: #b80303;
+}
+
+.grid-container {
+    background-color: #5ce9d9;
+    display: grid;
+    grid-template-areas:
+         'header header header header header header'
+         'menu main main main right right'
+         'menu footer footer footer footer footer';
+    grid-gap: 0px;
+    padding: 0px;     
+}
+
+.grid-container > div {
+    background-color: #5ce9d9;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 30px;
+
+}
+
+footer{
+    background: rgb(218, 143, 233);
+    color: black;
+    text-align:justify;
+    height: 100%;
+    line-height: 25px;
+}
+.footer{
+    text-align:start;
+}
+
+nav ul li  {
+    float: left;
+    list-style: none;
+    margin: 30px;
+    line-height: 20px;
+}
+
+
+.redes{
+    font-size: 60px;
+    box-shadow: 0px, 5px 10px color(srgb red green blue);
+}
+i{
+    border-radius: 80%;
+    box-shadow: 0px 5px 20px rgb(0, 0, 0, .35);
+
+}
