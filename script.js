@@ -48,3 +48,57 @@ const editarFlorExistente = (flor, indexFlor) => {
     flores[indice] = flor;
     actualizarFloresEnLocalStorage(flores);
 };
+
+const obtenerFloresDesdeLocalStorage = () => {
+    return JSON.parse(localStorage.getItem("flores")) || [];
+};
+
+const actualizarFloresEnLocalStorage = (flores) => {
+    localStorage.setItem("flores", JSON.stringify(flores));
+    cargarFloresDesdeLocalStorage();
+};
+
+const agregarFlorATabla = (flor, indice) => {
+    const cuerpoTabla = document.getElementById("bodyTablaFlores");
+    const fila = document.createElement("tr");
+    fila.innerHTML =  ` 
+        <td>${indice + 1}</td>
+        <td>${flor.nombre}</td>
+        <td>${flor.color}</td>
+        <td>${flor.cantidad}</td>
+        <td class="text-center">
+            <button class="btn btn-info btn-edit" data-indice="${indice}">Editar</button>
+            <button class="btn btn-danger btn-delete" data-indice="${indice}">Eliminar</button>
+        </td>
+    `;
+    cuerpoTabla.appendChild(fila);
+
+    fila.querySelector('.btn-edit').addEventListener('click', () => prepararEdicionFlor(indice));
+    
+    fila.querySelector('.btn-delete').addEventListener('click', () => eliminarFlor(indice));
+};
+
+const prepararEdicionFlor = (indice) => {
+    console.log("Editando flor con indice", indice);
+    const flores = obtenerFloresDesdeLocalStorage();
+    const flor = flores[indice];
+
+    document.getElementById("name").value = flor.nombre;
+    document.getElementById("color").value = flor.color;
+    document.getElementById("amount").value = flor.cantidad;
+    document.getElementById("flowerIndex").value = indice; 
+}; 
+
+const eliminarFlor = (indice) => {
+    if (confirm ("¿Estas seguro de eliminar esta flor?")) {
+        const flores = obtenerFloresDesdeLocalStorage();
+        flores.splice(indice, 1);
+        actualizarFloresEnLocalStorage(flores);
+    }
+};
+
+const reiniciarFormulario = () => {
+    document.getElementById("formularioFlores").reset();
+    document.getElementById("flowerIndex").value = "";
+
+};
